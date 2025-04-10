@@ -1,0 +1,78 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 500px;
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+  }
+  
+  .close-icon {
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .upload-area {
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    text-align: center;
+    background: black;
+  }
+  
+  .upload-icon {
+    font-size: 40px;
+    color: #777;
+    margin-bottom: 10px;
+  }
+  
+  .upload-btn {
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .upload-btn:hover {
+    background: #444;
+  }
+  
+  .close-upload-btn {
+    margin-top: 20px;
+    background: grey;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  
+  .close-upload-btn:hover {
+    background: black;
+  }
+  

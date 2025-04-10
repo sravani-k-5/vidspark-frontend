@@ -1,0 +1,45 @@
+.video-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 videos per row */
+  gap: 16px;
+  padding: 20px;
+  justify-content: center;
+  max-width: 1600px;
+  width: 90%;
+  margin: auto;
+}
+
+/* Ensure video container is styled properly */
+.music-item {
+  background: #0f0f0f;
+  color: #ffffff;
+  padding: 12px;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+  cursor: pointer;
+  border: 1px solid #333;
+  text-align: center;
+}
+
+/* Maintain video aspect ratio */
+.music-item video {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .video-list {
+    grid-template-columns: repeat(2, 1fr); /* 2 videos per row for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .video-list {
+    grid-template-columns: repeat(1, 1fr); /* 1 video per row for mobile */
+  }
+}

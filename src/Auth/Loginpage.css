@@ -1,0 +1,85 @@
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color:black;
+  padding: 20px; /* Increased padding */
+  box-sizing: border-box;
+}
+
+.login-form {
+  background-color: #fff;
+  padding: 35px 30px; /* Increased padding */
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 420px; /* Increased max width */
+  text-align: center;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.login-form h2 {
+  font-family: cursive;
+  color: #00b16a;
+  font-size: 28px; /* Slightly larger */
+  margin-bottom: 14px;
+}
+
+.sub-header {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 22px;
+}
+
+.sub-header a {
+  color: #00b16a;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Slightly more spacing between fields */
+}
+
+input[type="email"],
+input[type="password"] {
+  padding: 12px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  font-family: inherit;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+input[type="submit"] {
+  background-color: #00b16a;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #009e5c;
+}
+
+.footer-note {
+  margin-top: 14px;
+  font-size: 13px;
+  color: #777;
+}
