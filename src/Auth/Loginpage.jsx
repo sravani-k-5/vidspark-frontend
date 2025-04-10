@@ -18,7 +18,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:3002/api/login", formData);
+      const response = await axios.post("https://vidspark-backend.onrender.com/api/login", formData);
 
       if (response.data.token) {
         localStorage.setItem("token", response.data.token);

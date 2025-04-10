@@ -8,7 +8,7 @@
 
 //   useEffect(() => {
 //     axios
-//       .get("http://localhost:3002/videos?vidcategory=music") // Update with your actual API URL
+//       .get("https://vidspark-backend.onrender.com/videos?vidcategory=music") // Update with your actual API URL
 //       .then((response) => {
 //         setVideos(response.data);
 //         setLoading(false);
@@ -60,7 +60,7 @@
 
 //   useEffect(() => {
 //     axios
-//       .get("http://localhost:3002/videos?vidcategory=music") // Fetch only music category videos
+//       .get("https://vidspark-backend.onrender.com/videos?vidcategory=music") // Fetch only music category videos
 //       .then((response) => {
 //         setVideos(response.data);
 //         setLoading(false);
@@ -81,7 +81,7 @@
 //     }
 
 //     try {
-//       const response = await fetch(`http://localhost:3002/api/likeVideo/${videoId}`, {
+//       const response = await fetch(`https://vidspark-backend.onrender.com/api/likeVideo/${videoId}`, {
 //         method: "POST",
 //         headers: {
 //           "Content-Type": "application/json",
@@ -121,7 +121,7 @@
 //     }
 
 //     try {
-//       const response = await fetch(`http://localhost:3002/api/shareVideo/${videoId}`, {
+//       const response = await fetch(`https://vidspark-backend.onrender.com/api/shareVideo/${videoId}`, {
 //         method: "POST",
 //         headers: {
 //           "Content-Type": "application/json",
@@ -202,7 +202,7 @@ const Music = () => {
   // Fetch videos from the server
   const fetchVideos = async () => {
     try {
-      const response = await fetch("http://localhost:3002/videos?vidcategory=music");
+      const response = await fetch("https://vidspark-backend.onrender.com/videos?vidcategory=music");
       const data = await response.json();
       console.log(data)
       console.log("Fetched Videos:", data); // Debugging
@@ -231,7 +231,7 @@ const Music = () => {
       return;
     }
     try {
-      await fetch(`http://localhost:3002/api/likeVideo/${videoId}`, {
+      await fetch(`https://vidspark-backend.onrender.com/api/likeVideo/${videoId}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -256,7 +256,7 @@ const Music = () => {
       return;
     }
     try {
-      await fetch(`http://localhost:3002/api/shareVideo/${videoId}`, {
+      await fetch(`https://vidspark-backend.onrender.com/api/shareVideo/${videoId}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

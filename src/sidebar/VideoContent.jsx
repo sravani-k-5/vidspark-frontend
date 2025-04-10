@@ -11,8 +11,10 @@ const VideoContent = () => {
   // Fetch videos from the server
   const fetchVideos = async () => {
     try {
-      const response = await fetch("http://localhost:3002/videos");
+      const response = await fetch("https://vidspark-backend.onrender.com/videos");
+      console.log(response)
       const data = await response.json();
+      console.log(data)
       setVideos(data);
     } catch (error) {
       console.error("Error fetching videos:", error);
@@ -28,7 +30,7 @@ const VideoContent = () => {
     if (!token) return alert("User not authenticated. Please log in.");
 
     try {
-      const response = await fetch(`http://localhost:3002/api/likeVideo/${videoId}`, {
+      const response = await fetch(`https://vidspark-backend.onrender.com/api/likeVideo/${videoId}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

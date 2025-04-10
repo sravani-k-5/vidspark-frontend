@@ -9,7 +9,7 @@ const News = () => {
   // Fetch videos from the server
   const fetchVideos = async () => {
     try {
-      const response = await fetch("http://localhost:3002/videos?vidcategory=news");
+      const response = await fetch("https://vidspark-backend.onrender.com/videos?vidcategory=news");
       const data = await response.json();
       setVideos(data);
     } catch (error) {
@@ -29,7 +29,7 @@ const News = () => {
       return;
     }
     try {
-      await fetch(`http://localhost:3002/api/likeVideo/${videoId}`, {
+      await fetch(`https://vidspark-backend.onrender.com/api/likeVideo/${videoId}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -57,7 +57,7 @@ const News = () => {
       return;
     }
     try {
-      await fetch(`http://localhost:3002/api/shareVideo/${videoId}`, {
+      await fetch(`https://vidspark-backend.onrender.com/api/shareVideo/${videoId}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

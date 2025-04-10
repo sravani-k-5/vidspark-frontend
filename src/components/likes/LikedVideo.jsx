@@ -12,7 +12,7 @@ const LikedVideos = () => {
         }
 
         try {
-            const response = await fetch("http://localhost:3002/api/likedVideos", {
+            const response = await fetch("https://vidspark-backend.onrender.com/api/likedVideos", {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",

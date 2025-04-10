@@ -9,7 +9,7 @@ const App = () => {
   useEffect(() => {
     const fetchVideos = async () => {
       try {
-        const response = await fetch("http://localhost:3000/videos");
+        const response = await fetch("https://vidspark-backend.onrender.com/videos");
         const data = await response.json();
 
         if (selectedCategory === "all") {

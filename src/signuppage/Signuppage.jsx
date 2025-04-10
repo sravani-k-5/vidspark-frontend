@@ -31,7 +31,7 @@ const Signup = () => {
     setError("");
 
     try {
-      const response = await axios.post("http://localhost:3002/signup", formData);
+      const response = await axios.post("https://vidspark-backend.onrender.com/signup", formData);
       alert(response.data.message);
     } catch (err) {
       setError("Error signing up. Try again.");

@@ -28,7 +28,7 @@ const Register = () => {
     }
 
     try {
-      await axios.post("http://localhost:3002/signup", formData);
+      await axios.post("https://vidspark-backend.onrender.com/signup", formData);
       toast.success("Registration successful!", { position: "top-center" });
       setTimeout(() => navigate("/login"), 2000);
     } catch (error) {

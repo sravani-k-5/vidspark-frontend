@@ -86,7 +86,7 @@ export default Sidebar;
 //   useEffect(() => {
 //     const fetchVideos = async () => {
 //       try {
-//         const response = await fetch("http://localhost:3002/videos");
+//         const response = await fetch("https://vidspark-backend.onrender.com/videos");
 //         const data = await response.json();
 //         // console.log(data)
 //         setVideos(data);
@@ -101,7 +101,7 @@ export default Sidebar;
 
 //   const shareVideo = async (video) => {
 //     try {
-//       const response = await fetch("http://localhost:3002/api/shareVideo", {
+//       const response = await fetch("https://vidspark-backend.onrender.com/api/shareVideo", {
 //         method: "POST",
 //         headers: {
 //           "Content-Type": "application/json",

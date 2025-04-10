@@ -5,7 +5,7 @@ const Video = () => {
   const [videos, setVideos] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/videos")
+    axios.get("https://vidspark-backend.onrender.com/videos")
       .then((response) => setVideos(response.data))
       .catch((error) => console.error("Error fetching videos:", error));
   }, []);

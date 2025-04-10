@@ -9,7 +9,7 @@
 
 //   const fetchVideos = async () => {
 //     try {
-//       const response = await fetch("http://localhost:3002/videos");
+//       const response = await fetch("https://vidspark-backend.onrender.com/videos");
 //       const data = await response.json();
 //       setVideos(data);
 //     } catch (error) {
@@ -29,7 +29,7 @@
 //     }
 
 //     try {
-//       const response = await fetch(`http://localhost:3002/api/likeVideo/${videoId}`, {
+//       const response = await fetch(`https://vidspark-backend.onrender.com/api/likeVideo/${videoId}`, {
 //         method: "POST",
 //         headers: {
 //           "Content-Type": "application/json",
@@ -67,7 +67,7 @@
 //     }
 
 //     try {
-//       const response = await fetch(`http://localhost:3002/api/shareVideo/${videoId}`, {
+//       const response = await fetch(`https://vidspark-backend.onrender.com/api/shareVideo/${videoId}`, {
 //         method: "POST",
 //         headers: {
 //           "Content-Type": "application/json",
@@ -145,7 +145,7 @@ const VideoContent = () => {
   // Fetch videos from the server
   const fetchVideos = async () => {
     try {
-      const response = await fetch("http://localhost:3002/videos?vidcategory=Movies");
+      const response = await fetch("https://vidspark-backend.onrender.com/videos?vidcategory=Movies");
       const data = await response.json();
       setVideos(data);
     } catch (error) {
@@ -165,7 +165,7 @@ const VideoContent = () => {
       return;
     }
     try {
-      await fetch(`http://localhost:3002/api/likeVideo/${videoId}`, {
+      await fetch(`https://vidspark-backend.onrender.com/api/likeVideo/${videoId}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -193,7 +193,7 @@ const VideoContent = () => {
       return;
     }
     try {
-      await fetch(`http://localhost:3002/api/shareVideo/${videoId}`, {
+      await fetch(`https://vidspark-backend.onrender.com/api/shareVideo/${videoId}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -27,7 +27,7 @@ const FileUploadForm = ({ onClose }) => {
     formData.append("category", category);
 
     try {
-      await axios.post("http://localhost:3002/videoUpload", formData);
+      await axios.post("https://vidspark-backend.onrender.com/videoUpload", formData);
       toast.success("Video uploaded successfully!", { position: "top-center", autoClose: 2000 });
 
       // Close modal after success with delay
