@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { FaThumbsUp, FaShare, FaTimes } from "react-icons/fa";
+import "./music.css"
 
 const Gaming = () => {
   const [videos, setVideos] = useState([]);
