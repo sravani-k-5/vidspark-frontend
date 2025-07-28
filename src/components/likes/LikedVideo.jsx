@@ -3,6 +3,7 @@ import "./LikedVideo.css";
 
 const LikedVideos = () => {
     const [likedVideos, setLikedVideos] = useState([]);
+
     const fetchLikedVideos = async () => {
         const token = localStorage.getItem("token");
         console.log(token)
@@ -12,7 +13,7 @@ const LikedVideos = () => {
         }
 
         try {
-            const response = await fetch("https://vidspark-backend.onrender.com/api/likedVideos", {
+            const response = await fetch("http://localhost:3002/api/likedVideos", {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
@@ -32,6 +33,27 @@ const LikedVideos = () => {
             console.error("Error fetching liked videos:", error);
         }
     };
+    const handleDelete = async (videoId) => {
+    const token = localStorage.getItem("token");
+
+    try {
+      const response = await fetch(`http://localhost:3002/api/likedVideos/${videoId}`, {
+        method: "DELETE",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to delete liked video");
+      }
+
+      // Remove the deleted video from local state
+      setLikedVideos((prevVideos) => prevVideos.filter((video) => video._id !== videoId));
+    } catch (error) {
+      console.error("Error deleting liked video:", error);
+    }
+  };
 
     useEffect(() => {
 
@@ -39,8 +61,9 @@ const LikedVideos = () => {
     }, []);
 
     return (
+               
         <div className="video-section">
-            <h2>Liked Videos</h2>
+            {/* <h2>Liked Videos</h2> */}
             {likedVideos.length > 0 ? (
                 likedVideos.map((video) => (
                     <div key={video._id} className="video-item">
@@ -49,6 +72,9 @@ const LikedVideos = () => {
                         </video>
 
                         <h3>{video.vidtitle}</h3>
+                        <button className="delete-btn" onClick={() => handleDelete(video._id)}>
+                Delete
+              </button>
                     </div>
                 ))
             ) : (

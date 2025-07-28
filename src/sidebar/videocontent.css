@@ -1,14 +1,15 @@
-/* Video Grid Styles */
+
 .video-section {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
   padding: 20px;
+  margin-left: 60px;
 }
 
-.video-item {
+/* .video-item {
   cursor: pointer;
-}
+} */
 
 .video-item video {
   width: 100%;
@@ -18,11 +19,11 @@
 .video-item h3 {
   margin-top: 8px;
   font-size: 16px;
-  font-weight: normal; /* Restored original font weight */
-  color: #333; /* Restored original color */
+  font-weight: normal; 
+  color: #333; 
 }
 
-/* Theater Mode Styles */
+
 .theater-overlay {
   position: fixed;
   top: 0;
@@ -58,7 +59,7 @@
   cursor: pointer;
 }
 
-/* Action Buttons - Updated only share button font */
+
 .buttons {
   display: flex;
   gap: 15px;
@@ -92,7 +93,7 @@
   cursor: pointer;
   transition: all 0.2s;
   font-size: 14px;
-  font-family: 'Roboto', sans-serif; /* Only share button gets custom font */
+  font-family: 'Roboto', sans-serif; 
   font-weight: 500;
 }
 
@@ -106,7 +107,7 @@
   background: #ff0000;
 }
 
-/* Share Popup Styles */
+
 .share-popup {
   position: absolute;
   bottom: 80px;
@@ -178,7 +179,7 @@
 .email { color: #ea4335; }
 .link { color: #aaa; }
 
-/* Comments Section Styles */
+
 .comments-section {
   margin-top: 20px;
   padding: 15px;
@@ -253,4 +254,112 @@
 
 .delete-comment:hover {
   color: white;
+}
+
+
+@media (max-width: 768px) {
+  .video-section {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+  }
+
+  .theater-container {
+    width: 90%;
+  }
+
+  .share-popup {
+    width: 300px;
+    bottom: 80px;
+    right: 15px;
+  }
+
+  .buttons {
+    gap: 10px;
+  }
+
+  .like-button,
+  .comment-button,
+  .share-button {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+}
+@media (max-width: 375px) {
+  .video-section {
+  display: grid; 
+  grid-template-columns: 1fr;
+  padding: 10px;
+  margin-left: 2px;
+  gap: 12px;
+  justify-items: start; 
+  justify-content: start; 
+}
+  .video-item {
+    width: 100%;
+  }
+
+  .video-item h3 {
+    font-size: 14px;
+    text-align: left; 
+  }
+
+  .theater-container {
+    width: 95%;
+  }
+
+  .theater-video {
+    max-height: 60vh;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+
+  .like-button,
+  .comment-button,
+  .share-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .share-popup {
+    width: 90%;
+    right: 5%;
+    bottom: 90px;
+    padding: 12px;
+  }
+
+  .share-popup-header h3 {
+    font-size: 14px;
+  }
+
+  .share-option span {
+    font-size: 11px;
+  }
+
+  .comment-form {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .comment-form input,
+  .comment-form button {
+    width: 100%;
+  }
+
+  .comments-section {
+    padding: 10px;
+  }
+
+  .comment strong,
+  .comment p {
+    font-size: 13px;
+  }
+
+  .close-button {
+    top: -35px;
+    font-size: 20px;
+  }
 }

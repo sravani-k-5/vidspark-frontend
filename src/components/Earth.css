@@ -196,7 +196,7 @@ body {
 }
 
 .navbar {
-  background-color:rosybrown;
+  background-color:#706D54;
   padding: 10px 40px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: sticky;
@@ -214,9 +214,9 @@ body {
 }
 
 .left-section h1 {
-  font-family: 'Brush Script MT', cursive;
+  /* font-family: 'Brush Script MT', cursive; */
   font-size: 28px;
-  color: #ff4500;
+  color: orange;
   margin: 0;
 }
 

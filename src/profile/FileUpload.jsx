@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
 import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
-
 const FileUploadForm = ({ onClose }) => {
     console.log(onClose)
   const [selectedFile, setSelectedFile] = useState(null);
